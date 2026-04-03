@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéDex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__brand">
+          <span class="header__ball" aria-hidden="true"></span>
+          <div>
+            <h1 class="header__title">PokéDex</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="panel panel--search" aria-labelledby="search-heading">
+          <h2 id="search-heading" class="panel__title">Buscar Pokémon</h2>
+          <p class="panel__hint">
+            Usa el nombre en inglés o el número nacional (1–1025). Se consultan
+            tres endpoints: <strong>pokemon</strong>, <strong>pokemon-species</strong> y
+            <strong>type</strong>.
+          </p>
+          <form class="search" id="search-form" novalidate>
+            <label class="search__label" for="pokemon-query">Nombre o ID</label>
+            <div class="search__row">
+              <input
+                class="search__input"
+                type="text"
+                id="pokemon-query"
+                name="query"
+                placeholder="pikachu o 25"
+                autocomplete="off"
+                required
+              />
+              <button class="btn btn--primary" type="submit">Buscar</button>
+              <button class="btn btn--ghost" type="button" id="btn-random">
+                Al azar
+              </button>
+            </div>
+          </form>
+
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+
+          <article class="card card--hero" id="result-card" hidden>
+            <div class="card__visual">
+              <img
+                class="card__img"
+                id="pokemon-img"
+                src=""
+                alt=""
+                width="192"
+                height="192"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__name" id="pokemon-name">—</h3>
+              <dl class="stats">
+                <div class="stats__row">
+                  <dt>Peso</dt>
+                  <dd id="pokemon-weight">—</dd>
+                </div>
+                <div class="stats__row">
+                  <dt>Altura</dt>
+                  <dd id="pokemon-height">—</dd>
+                </div>
+                <div class="stats__row">
+                  <dt>Tipos</dt>
+                  <dd id="pokemon-types">—</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <div class="subpanels">
+            <section class="subpanel" aria-labelledby="species-heading">
+              <h3 id="species-heading" class="subpanel__title">Especie (pokemon-species)</h3>
+              <p class="subpanel__text" id="species-flavor">—</p>
+              <p class="subpanel__meta" id="species-genus"></p>
+            </section>
+            <section class="subpanel" aria-labelledby="type-heading">
+              <h3 id="type-heading" class="subpanel__title">Tipo principal (type)</h3>
+              <p class="subpanel__text" id="type-relations">—</p>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Datos de
+          <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer"
+            >PokeAPI</a
+          >
+          · Sin clave requerida
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

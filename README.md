@@ -1,3 +1,8 @@
+https://dsaw-2026-1.github.io/intro-to-asyncronism-las-ss/
+Santiago Álvarez Maffiold
+Sara Valentina Velandia Sarmiento
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/fQk_oUCZ)
 # Desarrollo de Aplicaciones Web
 ## Introducción al Asíncronismo
 
@@ -13,6 +18,16 @@
 
 - Marcar el repositorio, recuerde que tarea que se entregue sin nombre será calificada con cero.
 - Desplegar la página, recuerde que tarea que se entregue sin desplegar será calificada con cero.
+
+## Despliegue (GitHub Pages)
+
+Este repositorio incluye el workflow `.github/workflows/deploy-github-pages.yml`, que publica el sitio al hacer `push` a `master` o `main`.
+
+1. En GitHub: **Settings** → **Pages** → **Build and deployment**.
+2. En **Source**, elige **GitHub Actions** (no “Deploy from a branch”).
+3. Sube los cambios al remoto; en **Actions** debería ejecutarse **Deploy GitHub Pages**. Al terminar, el enlace aparece en **Settings** → **Pages** (también en el resumen del job, campo **github-pages**).
+
+La URL suele ser `https://<usuario>.github.io/<nombre-repo>/`.
 
 
 # Documentos sugeridos
