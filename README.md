@@ -15,6 +15,16 @@
 - Marcar el repositorio, recuerde que tarea que se entregue sin nombre será calificada con cero.
 - Desplegar la página, recuerde que tarea que se entregue sin desplegar será calificada con cero.
 
+## Despliegue (GitHub Pages)
+
+Este repositorio incluye el workflow `.github/workflows/deploy-github-pages.yml`, que publica el sitio al hacer `push` a `master` o `main`.
+
+1. En GitHub: **Settings** → **Pages** → **Build and deployment**.
+2. En **Source**, elige **GitHub Actions** (no “Deploy from a branch”).
+3. Sube los cambios al remoto; en **Actions** debería ejecutarse **Deploy GitHub Pages**. Al terminar, el enlace aparece en **Settings** → **Pages** (también en el resumen del job, campo **github-pages**).
+
+La URL suele ser `https://<usuario>.github.io/<nombre-repo>/`.
+
 
 # Documentos sugeridos
 - [¿Qué es figma?](https://www.youtube.com/watch?v=1pW_sk-2y40&pp=ygUMZmlnbWEgY291cnNl)

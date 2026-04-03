@@ -1,0 +1,40 @@
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Archivos temporales y copias de respaldo ---
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# --- Variables de entorno y secretos (nunca subir claves) ---
+.env
+.env.*
+!.env.example
+
+# --- Si más adelante usas Node/npm (herramientas de build, linters) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Salidas de build comunes ---
+dist/
+build/
+out/
+.cache/
+
+# --- IDEs y editores (descomenta lo que aplique) ---
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Cobertura y pruebas locales ---
+coverage/
+.nyc_output/
